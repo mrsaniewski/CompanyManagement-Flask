@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block title %}Loyalty{% endblock %} {% block content%}
+
+<style>
+  .bg-teal { background: orange; color:white;}
+  .bg-teal:focus { background: green; }
+  .title{font-weight: bold;}
+  .sayhi{font-weight: bold; font-size: 30px;}
+  .points{font-size: 25px;}
+
+</style>
+
+<h1 align="center">Change your points</h1>
+
+<a class="sayhi">Hi, {{user.first_name}}</a>
+</br>
+
+<a class="points">Your points: {{user.points}}</a>
+</br>
+
+
+
+<h1 align="center">Prizes</h1>
+<ul class="list-group list-group-flush" id="prizes">
+  {% for prize in user.prizes %}
+  <li class="list-group-item">
+      <div class = "title">
+    {{ prize.name }}
+      </div>
+    <br />
+    <div align="right">
+      <a class="points">Points: {{prize.value}}</a>
+
+      <button type="submit" class="bg-teal" onClick="donePrize({{prize.id}})"> Done </button>
+    </div>
+    <br />
+    <br />
+  </li>
+      {% endfor %}
+</ul>
+
+
+{% endblock %}
