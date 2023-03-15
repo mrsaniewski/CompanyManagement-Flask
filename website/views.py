@@ -59,8 +59,9 @@ def done_task():
     task = Task.query.get(taskId)
     if task:
         if task.user_id == current_user.id:
-            db.session.delete(task)
+           # db.session.delete(task)
             current_user.points = current_user.points + 10
+            task.complete = True
             db.session.commit()
     flash('Points added !', category='message')
 
@@ -74,8 +75,9 @@ def done_prize():
     prize = Prize.query.get(prizeId)
     if prize:
         if prize.user_id == current_user.id:
-            db.session.delete(prize)
+            #db.session.delete(prize)
             current_user.points = current_user.points - 20
+            prize.claimed = True
             db.session.commit()
     flash('Points deducted !', category='message')
 

@@ -21,6 +21,6 @@ function donePrize(prizeId) {
     method: "POST",
     body: JSON.stringify({ prizeId: prizeId }),
   }).then((_res) => {
-    window.location.href = "/";
+    window.location.href = "/loyalty";
   });
 }

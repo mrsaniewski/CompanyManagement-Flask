@@ -27,13 +27,15 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar">
+      <a class="navbar-brand d-flex w-20 mr-auto" id="home" href="/">Flask App</a>
+
+      <div class="navbar-nav w-100 justify-content-center" id="navbar">
         <div class="navbar-nav">
           {% if user.is_authenticated %}
           <a class="nav-item nav-link" id="home" href="/">Home</a>
-          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           <a class="nav-item nav-link" id="loyalty" href="/loyalty">Loyalty program</a>
           <a class="nav-item nav-link" id="about" href="/about">About</a>
+          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}
           <a class="nav-item nav-link" id="login" href="/login">Login</a>
           <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>

@@ -30,7 +30,13 @@
     <div align="right">
       <a class="points">Points: {{prize.value}}</a>
 
+
+      {% if not prize.claimed %}
       <button type="submit" class="bg-teal" onClick="donePrize({{prize.id}})"> Done </button>
+    {% else %}
+    <p>Claimed</p>
+    {% endif %}
+
     </div>
     <br />
     <br />

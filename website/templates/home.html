@@ -26,7 +26,14 @@
     <br />
     {{ task.data }}
     <div align="right">
+
+
+      {% if not task.complete %}
       <button type="submit" class="bg-teal" onClick="doneTask({{task.id}})"> Done </button>
+    {% else %}
+    <p>Task is done</p>
+    {% endif %}
+
     </div>
     <br />
     <br />
