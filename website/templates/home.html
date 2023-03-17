@@ -1,48 +1,39 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
 <style>
   .bg-teal { background: orange; color:white;}
   .bg-teal:focus { background: green; }
   .title{font-weight: bold;}
   .sayhi{font-weight: bold; font-size: 30px;}
   .points{font-size: 25px;}
-
 </style>
 <br />
 <br />
 <a class="sayhi">Hi, {{user.first_name}}</a>
 <br />
-
 <a class="points">Your points: {{user.points}}</a>
-
-
 <h1 align="center">Tasks</h1>
 <ul class="list-group list-group-flush" id="tasks">
   {% for task in user.tasks %}
   <li class="list-group-item">
     <div class = "title">
     {{ task.title }}
-  </div>
+    </div>
     <br />
     {{ task.data }}
     <div align="right">
-
-
       {% if not task.complete %}
       <button type="submit" class="bg-teal" onClick="doneTask({{task.id}})"> Done </button>
-    {% else %}
-    <p>Task is done</p>
-    {% endif %}
-
+      {% else %}
+      <p>Task is done</p>
+      {% endif %}
     </div>
     <br />
     <br />
     <p>Added:   {{task.date}}</p>
     <div align="right">
-
-    <button type="button" class="close" onClick="deleteTask({{task.id}})">
-      <span aria-hidden="true">&times;</span>
-    </button>
+      <button type="button" class="close" onClick="deleteTask({{task.id}})">
+        <span aria-hidden="true">&times;</span>
+      </button>
   </div>
   </li>
   {% endfor %}
@@ -52,11 +43,11 @@
 <br />
 <h3 align="center">Add new task</h3>
 <form method="POST">
-  <textarea name="title" id="title" class="form-control" rows = "1"></textarea>
+    <textarea name="title" id="title" class="form-control" rows = "1"></textarea>
   <br />
-  <textarea name="task" id="task" class="form-control" rows = "5"></textarea>
+    <textarea name="task" id="task" class="form-control" rows = "5"></textarea>
   <br />
-  <div align="center">
+    <div align="center">
     <button type="submit" class="btn btn-primary">Add Task</button>
   </div>
 </form>

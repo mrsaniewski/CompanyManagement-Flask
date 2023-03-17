@@ -6,19 +6,12 @@
   .title{font-weight: bold;}
   .sayhi{font-weight: bold; font-size: 30px;}
   .points{font-size: 25px;}
-
 </style>
-
 <h1 align="center">Change your points</h1>
-
 <a class="sayhi">Hi, {{user.first_name}}</a>
 </br>
-
 <a class="points">Your points: {{user.points}}</a>
 </br>
-
-
-
 <h1 align="center">Prizes</h1>
 <ul class="list-group list-group-flush" id="prizes">
   {% for prize in user.prizes %}
@@ -29,20 +22,15 @@
     <br />
     <div align="right">
       <a class="points">Points: {{prize.value}}</a>
-
-
       {% if not prize.claimed %}
       <button type="submit" class="bg-teal" onClick="donePrize({{prize.id}})"> Done </button>
-    {% else %}
-    <p>Claimed</p>
-    {% endif %}
-
+      {% else %}
+      <p>Claimed</p>
+      {% endif %}
     </div>
     <br />
     <br />
   </li>
       {% endfor %}
 </ul>
-
-
 {% endblock %}
