@@ -22,4 +22,4 @@ This Web Application streamlines the company's workflow, increases productivity 
 * Generation of pdf files with information about the application
   
 ## Screenshots
-!(https://ibb.co/sq9YKfH)
+![](https://ibb.co/sq9YKfH)
