@@ -23,3 +23,9 @@ This Web Application streamlines the company's workflow, increases productivity 
   
 ## Screenshots
 ![](https://i.ibb.co/hVFzB6f/uiflask.jpg)
+![](https://i.ibb.co/mthnBkx/uiflask2.jpg)
+![](https://i.ibb.co/CsvkbCT/loylatyflask.jpg)
+![](https://i.ibb.co/mqnP5v1/noweabout.jpg)
+![](https://i.ibb.co/t4vFpgw/signupflask.jpg)
+![](https://i.ibb.co/Wthg2v9/loginflask.jpg)
+![](https://i.ibb.co/zSkdQT2/adminflask.jpg)
