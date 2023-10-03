@@ -20,3 +20,6 @@ This Web Application streamlines the company's workflow, increases productivity 
 * Exchanging earned points for prizes
 * Admin panel
 * Generation of pdf files with information about the application
+  
+## Screenshots
+!(https://ibb.co/sq9YKfH)
